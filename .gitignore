@@ -1,0 +1,16 @@
+cache/
+out/
+lib/
+
+/target/
+
+.vscode/
+.idea/
+*.DS_Store
+
+.env
+
+contracts/lib
+
+crates/sequencer/db
+**/proptest-regressions

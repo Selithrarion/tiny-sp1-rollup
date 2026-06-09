@@ -1,0 +1,13 @@
+[server]
+port = 3000
+host = "0.0.0.0"
+
+[database]
+state_tree_path = "db/state_tree_db"
+queues_path = "db/queues_db"
+
+[l1]
+enabled = false
+rpc_url = ""
+bridge_address = "0x0000000000000000000000000000000000000000"
+private_key = ""

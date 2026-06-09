@@ -1,0 +1,29 @@
+[package]
+name = "sequencer"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+stf = { path = "../stf" }
+rollup_core = { path = "../core" }
+
+anyhow = { workspace = true }
+thiserror = { workspace = true }
+sp1-sdk = { workspace = true }
+serde = { workspace = true }
+serde_json = { workspace = true }
+alloy = { workspace = true }
+alloy-sol-types = { workspace = true }
+alloy-contract = { workspace = true }
+
+axum = {version = "0.7.9", features = ["macros"]} # as alloy
+tokio = { version = "1.52", features = ["full"] }
+monotree = { version = "0.4", features = ["db_rocksdb"] }
+dotenvy = "0.15.7"
+config = "0.15.23"
+backoff = { version = "0.4", features = ["tokio"] }
+rocksdb = "0.23.0"
+bincode = { version = "1.3.3" }
+
+[build-dependencies]
+sp1-build = { workspace = true }

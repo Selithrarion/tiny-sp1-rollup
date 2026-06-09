@@ -1,0 +1,37 @@
+[package]
+version = "0.1.0"
+name = "rollup-script"
+edition = "2024"
+default-run = "main"
+
+[[bin]]
+name = "main"
+path = "src/bin/main.rs"
+
+[[bin]]
+name = "evm"
+path = "src/bin/evm.rs"
+
+[[bin]]
+name = "vkey"
+path = "src/bin/vkey.rs"
+
+[dependencies]
+rollup_core = { path = "../core" }
+stf = { path = "../stf" }
+
+alloy-sol-types = { workspace = true }
+anyhow = { workspace = true }
+serde = { workspace = true }
+thiserror = { workspace = true }
+
+# TODO: workspace
+sp1-sdk = { version = "6.0.1", features = ["blocking", "native-gnark"] }
+serde_json = { version = "1.0", default-features = false, features = ["alloc"] }
+clap = { version = "4.0", features = ["derive", "env"] }
+hex = "0.4.3"
+dotenv = "0.15.0"
+monotree = { version = "0.4", features = ["db_rocksdb"] }
+
+[build-dependencies]
+sp1-build = { workspace = true }

@@ -1,0 +1,16 @@
+[package]
+name = "stf"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+alloy-sol-types = { workspace = true }
+bincode = { workspace = true }
+sha3 = { workspace = true }
+
+alloy-primitives = { version = "1.6", default-features = false }
+serde = { version = "1.0", default-features = false, features = ["derive", "alloc"] }
+
+[dev-dependencies]
+proptest = "1.11"
+proptest-derive = "0.8"
