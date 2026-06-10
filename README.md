@@ -22,7 +22,8 @@ cannot calculate the final state and only then get a proof - wont be possible to
 cuz we dont have a full tree  
 
 used monotree crate for sparse merkle trees    
-not sure its suitable for production cuz of &mut self API so have to implement it from scratch to get a more granular locking strategy?    
+not sure its suitable for production cuz of &mut self API so have to implement it from scratch to get a more granular locking strategy?  
+also it supports only sha3 and blake2, no poseidon  
 
 * using automatic `program` build.rs from succint docs
 * have a config/default.toml + .env  
